@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppSoftware.LicenceEngine.Common", "AppSoftware.LicenceEngine.Common\AppSoftware.LicenceEngine.Common.csproj", "{5E2315FA-7B57-4C6D-B160-625D0DEC2BEE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppSoftware.LicenceEngine.KeyGenerator", "AppSoftware.LicenceEngine.KeyGenerator\AppSoftware.LicenceEngine.KeyGenerator.csproj", "{3CB29630-B535-4EF4-BA2D-860E2B8BB5C3}"
@@ -8,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppSoftware.LicenceEngine.KeyVerification", "AppSoftware.LicenceEngine.KeyVerification\AppSoftware.LicenceEngine.KeyVerification.csproj", "{79BCD643-1E9B-4A7D-A51E-9B192264B9B3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppSoftware.LicenceEngine.Tests", "AppSoftware.LicenceEngine.Tests\AppSoftware.LicenceEngine.Tests.csproj", "{7123EFD2-EF93-4024-9140-B0262045042B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Licenser", "Licenser\Licenser.csproj", "{D82612CA-90BE-450A-8FF6-2AC2CBFFEF0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,8 +35,15 @@ Global
 		{7123EFD2-EF93-4024-9140-B0262045042B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7123EFD2-EF93-4024-9140-B0262045042B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7123EFD2-EF93-4024-9140-B0262045042B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D82612CA-90BE-450A-8FF6-2AC2CBFFEF0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D82612CA-90BE-450A-8FF6-2AC2CBFFEF0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D82612CA-90BE-450A-8FF6-2AC2CBFFEF0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D82612CA-90BE-450A-8FF6-2AC2CBFFEF0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E0119F7-83CF-420E-93E7-8A10A6965F99}
 	EndGlobalSection
 EndGlobal
