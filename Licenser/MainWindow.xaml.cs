@@ -23,7 +23,7 @@ namespace Licenser
     /// </summary>
     public partial class MainWindow : Window
     {
-        const int KeyLength = 5;
+        const int KeyLength = 3;
         private Dictionary<string, KeyByteSet[]> Apps { get; set; }
         private Dictionary<string, Dictionary<string, int>> AppUserMap { get; set; }
 
@@ -45,18 +45,32 @@ namespace Licenser
             {
                 btnGen.IsEnabled = false;
 
+                var random = new Random();
+
                 if (!Apps.ContainsKey(txtApp.Text))
                 {
-                    var newKeySet = new KeyByteSet[KeyLength];
 
-                    var random = new Random();
-                    for (int j = 0; j < KeyLength; j++)
+                    if (txtApp.Text == "CopyTool")
                     {
-                        newKeySet[j] = new KeyByteSet(j + 1, (byte)random.Next(0, 256), (byte)random.Next(0, 256), (byte)random.Next(0, 256));
-                    }
+                        Apps.Add(txtApp.Text, new KeyByteSet[] {
+                            new KeyByteSet(1, 177, 99, 0),
+                            new KeyByteSet(2, 186, 153, 17),
+                            new KeyByteSet(3, 7, 113, 200),
+                            //new KeyByteSet(4, 73, 102, 49),
+                            //new KeyByteSet(5, 61, 173, 33),
+                        });
+                    } else
+                    {
+                        var newKeySet = new KeyByteSet[KeyLength];
+                        for (int j = 0; j < KeyLength; j++)
+                        {
+                            newKeySet[j] = new KeyByteSet(j + 1, (byte)random.Next(0, 256), (byte)random.Next(0, 256), (byte)random.Next(0, 256));
+                        }
 
-                    Apps.Add(txtApp.Text, newKeySet);
+                        Apps.Add(txtApp.Text, newKeySet);
+                    }
                     AppUserMap.Add(txtApp.Text, new Dictionary<string, int>());
+
                 }
 
                 if (!AppUserMap[txtApp.Text].ContainsKey(txtUser.Text))
